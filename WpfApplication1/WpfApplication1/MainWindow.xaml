@@ -1,0 +1,102 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <GroupBox Grid.Row="0" Height="100" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid Margin="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--colors-->
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="11" BorderThickness="1,1,1,1" Margin="0,0,1,3" Background="#FF640000"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="12" BorderThickness="1,1,1,1" Margin="1,0,1,3" Background="#FF960000"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="13" BorderThickness="1,1,1,1" Margin="1,0,1,3" Background="#FFC80000"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="14" BorderThickness="1,1,1,1" Margin="1,0,1,3" Background="DarkGreen"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="15" BorderThickness="1,1,1,1" Margin="1,0,1,3" Background="#FF009600"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="16" BorderThickness="1,1,1,1" Margin="1,0,1,3" Background="#FF00C800"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="17" BorderThickness="1,1,1,1" Margin="1,0,1,3" Background="#FF000064"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="18" BorderThickness="1,1,1,1" Margin="1,0,1,3" Background="#FF000096"/>
+
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="11" BorderThickness="1,1,1,1" Margin="0,7,1,7" Grid.Row="1" Background="#FF0000C8"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="12" BorderThickness="1,1,1,1" Margin="1,7,1,7" Grid.Row="1" Background="DarkOrange"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="13" BorderThickness="1,1,1,1" Margin="1,7,1,7" Grid.Row="1" Background="Purple"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="14" BorderThickness="1,1,1,1" Margin="1,7,1,7" Grid.Row="1" Background="Pink"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="15" BorderThickness="1,1,1,1" Margin="1,7,1,7" Grid.Row="1" Background="Black"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="16" BorderThickness="1,1,1,1" Margin="1,7,1,7" Grid.Row="1" Background="#FF646464"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="17" BorderThickness="1,1,1,1" Margin="1,7,1,7" Grid.Row="1" Background="#FF969696"/>
+                <Button Click="Change_Color" Width="30" Height="30" Grid.Column="18" BorderThickness="1,1,1,1" Margin="1,7,1,7" Grid.Row="1" Background="White"/>
+
+
+                <!--brush thickness-->
+                <Button Click="Change_Brush_Size" Grid.Column="5" Width="20" Height="20" BorderThickness="1,1,1,1" Margin="0,0,0,0" Background="#FFF">
+                    <TextBlock Text="•" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#000" Margin="0,-1,0,0"/>
+                </Button>
+                <Button Click="Change_Brush_Size" Grid.Column="6" FontSize="13" Width="20" Height="20" BorderThickness="1,1,1,1" Margin="1,0,0,0" Background="#FFF">
+                    <TextBlock Text="•" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#000" Margin="0,-2,0,0"/>
+                </Button>
+                <Button Click="Change_Brush_Size" Grid.Column="7" FontSize="17" Width="20" Height="20" BorderThickness="1,1,1,1" Margin="1,0,0,0" Background="#FFF">
+                    <TextBlock Text="•" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#000" Margin="0,-2,0,0"/>
+                </Button>
+                <Button Click="Change_Brush_Size" Grid.Column="8" FontSize="25" Width="20" Height="20" BorderThickness="1,1,1,1" Margin="1,0,0,0" Background="#FFF">
+                    <TextBlock Text="•" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#000" Margin="0,-4,0,0"/>
+                </Button>
+                <Button Click="Change_Brush_Size" Grid.Column="9" FontSize="35" Width="20" Height="20" BorderThickness="1,1,1,1" Margin="1,0,0,0" Background="#FFF">
+                    <TextBlock Text="•" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#000" Margin="0,-5,0,0"/>
+                </Button>
+
+                <!--drawing methods-->
+                <Button Click="Drawing_Method" x:Name="rectangle" Grid.Column="5" Grid.Row="1" Width="20" Height="20" BorderThickness="1,1,1,1" Margin="0,0,0,0" Background="#FFF">
+                    <Image Source="/images/rectangle.png" />
+                </Button>
+
+                <Button Click="Drawing_Method" x:Name="circle" Grid.Column="6" Grid.Row="1" FontSize="13" Width="20" Height="20" BorderThickness="1,1,1,1" Margin="1,0,0,0" Background="#FFF">
+                    <Image Source="images/circle.png" />
+                </Button>
+                <Button Click="Drawing_Method" x:Name="brush" Grid.Column="7" Grid.Row="1" FontSize="13" Width="20" Height="20" BorderThickness="1,1,1,1" Margin="1,0,0,0" Background="#FFF">
+                    <Image Source="images/brush.png" />
+                </Button>
+
+
+                <!--save/load-->
+                <Button x:Name="save" Content="Save" Grid.Row="0" Grid.Column="1" Width="100" Height="40"  Click="Save"/>
+                <Button x:Name="load" Content="Load" Grid.Row="1" Grid.Column="1" Width="100" Height="40" Click="Load"/>
+            </Grid>
+        </GroupBox>
+
+        <Canvas Grid.Row="1" Height="500" Width="800" Name="paintSurface" MouseDown="Canvas_MouseDown_1" MouseMove="Canvas_MouseMove_1" Margin="0" >
+            <Canvas.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Canvas.Background>
+        </Canvas>
+    </Grid>
+</Window>
