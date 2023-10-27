@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\brush.png" />
+    <None Remove="images\circle.png" />
+    <None Remove="images\eraser.png" />
+    <None Remove="images\rectangle.png" />
+    <None Remove="images\vector.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\brush.png" />
+    <Resource Include="images\circle.png" />
+    <Resource Include="images\eraser.png" />
+    <Resource Include="images\rectangle.png" />
+    <Resource Include="images\vector.png" />
+  </ItemGroup>
+
+</Project>
