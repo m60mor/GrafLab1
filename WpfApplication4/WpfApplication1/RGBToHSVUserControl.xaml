@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WpfApplication1.RGBToHSVUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:WpfApplication1"
+             mc:Ignorable="d"
+             x:Name="rgbControl"
+             d:DesignHeight="170" d:DesignWidth="400">
+    <Border Background="White" BorderBrush="Black" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="89*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,10,10,10">
+                <TextBlock Text="Red:" Margin="0,0,10,0" Width="35"/>
+                <TextBox x:Name="RedTextBox" Width="50" MaxLength="3" PreviewTextInput="NumericInputOnly" Text="0" TextChanged="TextBox_TextChanged"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10,10,10,10">
+                <TextBlock Text="Green:" Margin="0,0,10,0" Width="35"/>
+                <TextBox x:Name="GreenTextBox" Width="50" MaxLength="3" PreviewTextInput="NumericInputOnly" Text="0" TextChanged="TextBox_TextChanged"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,10,10,10">
+                <TextBlock Text="Blue:" Margin="0,0,10,0" Width="35"/>
+                <TextBox x:Name="BlueTextBox" Width="50" MaxLength="3" PreviewTextInput="NumericInputOnly" Text="0" TextChanged="TextBox_TextChanged"/>
+            </StackPanel>
+
+
+            <Button Grid.Row="3" Content="Convert" Width="80" HorizontalAlignment="Center" Margin="0,18,0,-7" Click="ConvertButton_Click"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="HsvResultText" Margin="10,10,10,-13" TextAlignment="Center"><Run Language="pl-pl"/></TextBlock>
+            <Ellipse Grid.Column="1" Margin="65,5,65,35" Grid.RowSpan="4" Stroke="Black" StrokeThickness="1">
+                <Ellipse.Fill>
+                    <SolidColorBrush Color="{Binding Path=SelectedColor, RelativeSource={RelativeSource AncestorType={x:Type local:RGBToHSVUserControl}}}"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Grid>
+    </Border>
+</UserControl>
