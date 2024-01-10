@@ -161,21 +161,20 @@ namespace WpfApplication1
         //Save and load
         private void Save(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(currentLayer.ActualHeight.ToString());
-            RenderTargetBitmap renderBitmap = new RenderTargetBitmap((int)currentLayer.ActualWidth, (int)currentLayer.ActualHeight, 96, 96, PixelFormats.Pbgra32);
-            renderBitmap.Render(currentLayer);
-            
-            var crop = new CroppedBitmap(renderBitmap, new Int32Rect(0, 100, (int)currentLayer.ActualWidth, (int)(currentLayer.ActualHeight - 100)));
+            RenderTargetBitmap renderBitmap = new RenderTargetBitmap((int)paintSurface.ActualWidth, (int)paintSurface.ActualHeight, 96, 96, PixelFormats.Pbgra32);
+            renderBitmap.Render(paintSurface);
+
+            var crop = new CroppedBitmap(renderBitmap, new Int32Rect(0, 100, (int)paintSurface.ActualWidth, (int)(paintSurface.ActualHeight - 100)));
             BitmapEncoder encoder = new PngBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(crop));
 
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files|*.png;*.jpg;*.jpeg;*.gif;*.bmp|All Files|*.*";
-            if (openFileDialog.ShowDialog() == true)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Image Files|*.png;*.jpg;*.jpeg;*.gif;*.bmp|All Files|*.*";
+            if (saveFileDialog.ShowDialog() == true)
             {
                 try
                 {
-                    using (var fs = new FileStream(openFileDialog.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
+                    using (var fs = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
                     {
                         encoder.Save(fs);
                     }
@@ -186,6 +185,7 @@ namespace WpfApplication1
                 }
             }
         }
+
         private void Load(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
