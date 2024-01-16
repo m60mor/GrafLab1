@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\arrow.png" />
+    <None Remove="images\brush.png" />
+    <None Remove="images\circle.png" />
+    <None Remove="images\cuboid.png" />
+    <None Remove="images\cylinder.png" />
+    <None Remove="images\eraser.png" />
+    <None Remove="images\pyramid.png" />
+    <None Remove="images\rectangle.png" />
+    <None Remove="images\sphere.png" />
+    <None Remove="images\triangle.png" />
+    <None Remove="images\vector.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Emgu.CV" Version="4.8.1.5350" />
+    <PackageReference Include="Emgu.CV.runtime.windows" Version="4.8.1.5350" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\arrow.png" />
+    <Resource Include="images\brush.png" />
+    <Resource Include="images\circle.png" />
+    <Resource Include="images\cuboid.png" />
+    <Resource Include="images\cylinder.png" />
+    <Resource Include="images\eraser.png" />
+    <Resource Include="images\pyramid.png" />
+    <Resource Include="images\rectangle.png" />
+    <Resource Include="images\sphere.png" />
+    <Resource Include="images\triangle.png" />
+    <Resource Include="images\vector.png" />
+  </ItemGroup>
+
+</Project>
